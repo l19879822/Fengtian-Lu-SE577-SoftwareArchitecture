@@ -1,2 +1,3 @@
-# Fengtian-Lu-SE577-SoftwareArchitecture
-Repositorty for learning SE-577 Software Architecture
+# Self Introduction
+My name is Fengtian Lu, I am working as a software engineer in Scheduler DVR team at Comcast. My daily job is to support our team with QA testing with automated testing framework from development stage all the way to production stage. I am simultaneously developing and suppoting two automation framework at two different stages(one framework to dev code in local environment and one framework testing code on CI environment).
+My goal from this course is to cultivate myself with detailed sense of software architecture like architectual pattern, principles, design patterns, clean code, programing paradigms, etc, so that I could have strategly or structurely thinking on how to build and design a software application and understand how different components in this architecture interacting with each other.
