@@ -1,2 +1,2 @@
-# Fengtian-Lu-SE577-SoftwareArchitecture
+# fengtian-lu-se577
 Repositorty for learning SE-577 Software Architecture
