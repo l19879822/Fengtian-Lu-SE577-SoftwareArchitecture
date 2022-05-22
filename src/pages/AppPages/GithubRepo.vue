@@ -15,12 +15,23 @@
   </div>
 </template>
 
+<script lang="ts">
+export default {
+  name: 'GitHubPage',
+};
+</script>
+
 <script setup lang="ts">
-// import { GitRepoRowDataType } from './types/GitRepoRowDataType';
-import { result } from '../../router/YamlLoader';
 import { ref, onMounted } from 'vue';
-// import axios from 'axios';
-import { rowType } from '../../types/rowType';
+import axios from 'axios';
+
+type rowType = {
+  id: string;
+  name: string;
+  url: string;
+  language: string;
+  updated_at: string;
+};
 
 const columns = [
   { name: 'id', label: 'ID', align: 'left', field: 'id', sortable: true },
@@ -32,9 +43,12 @@ const columns = [
 let rows = ref([] as rowType[]);
 
 onMounted(async () => {
-  const res = result;
+  const res = await axios.get(
+    'https://api.github.com/users/architectingsoftware/repos'
+  );
+
   rows.value = [];
-  const rList = res as rowType[];
+  const rList = res.data as rowType[];
   const resList = rList.map((row) => {
     const mappedRow: rowType = {
       id: row.id,
