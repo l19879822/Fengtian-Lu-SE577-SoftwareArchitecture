@@ -23,7 +23,6 @@ export default {
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { rowType } from '../types/rowType';
 import things from '../../data/GithubRepo.yaml';
 
 let rowData = Object.entries(things);
