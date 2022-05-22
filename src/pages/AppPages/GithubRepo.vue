@@ -26,10 +26,7 @@ import { ref, onMounted } from 'vue';
 import { rowType } from '../types/rowType';
 import things from '../../data/GithubRepo.yaml';
 
-let test = [];
-
-test = things;
-test = Object.entries(test);
+let rowData = Object.entries(things);
 
 type rowType = {
   id: string;
@@ -50,7 +47,7 @@ let rows = ref([] as rowType[]);
 
 onMounted(async () => {
   rows.value = [];
-  const resList = test.map((row) => {
+  const resList = rowData.map((row) => {
     const mappedRow: rowType = {
       id: row[1].id,
       name: row[1].name,
