@@ -23,7 +23,9 @@ export default {
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
+import things from '../../data/GithubRepo.yaml';
+
+let rowData = Object.entries(things);
 
 type rowType = {
   id: string;
@@ -43,19 +45,14 @@ const columns = [
 let rows = ref([] as rowType[]);
 
 onMounted(async () => {
-  const res = await axios.get(
-    'https://api.github.com/users/architectingsoftware/repos'
-  );
-
   rows.value = [];
-  const rList = res.data as rowType[];
-  const resList = rList.map((row) => {
+  const resList = rowData.map((row) => {
     const mappedRow: rowType = {
-      id: row.id,
-      name: row.name,
-      url: row.url,
-      language: row.language,
-      updated_at: row.updated_at,
+      id: row[1].id,
+      name: row[1].name,
+      url: row[1].url,
+      language: row[1].language,
+      updated_at: row[1].updated_at,
     };
     return mappedRow;
   });
