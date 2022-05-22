@@ -2,12 +2,12 @@ angular-ts:
   id: 61545813
   name: angular-ts
   url: https://api.github.com/repos/ArchitectingSoftware/angular-ts
-  language: TypeScript,
+  language: TypeScript
   updated_at: 2016-06-20T12:25:36Z
 
 bc-se575-aws-lambda-dem:
   id: 308070829
   name: bc-se575-aws-lambda-demo
   url: https://api.github.com/r…bc-se575-aws-lambda-demo
-  language: Go,
+  language: Go
   updated_at: 2020-10-28T16:08:43Z
