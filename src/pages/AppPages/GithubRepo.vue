@@ -23,9 +23,9 @@ export default {
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import things from '../../data/GithubRepo.yaml';
+import ropoData from '../../data/GithubRepo.yaml';
 
-let rowData = Object.entries(things);
+let rowData = Object.entries(ropoData);
 
 type rowType = {
   id: string;
