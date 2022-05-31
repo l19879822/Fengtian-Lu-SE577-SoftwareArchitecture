@@ -11,6 +11,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const { configure } = require('quasar/wrappers');
+const envparser = require('./src/config/envparser.ts');
 
 module.exports = configure(function (ctx) {
   return {
@@ -51,6 +52,10 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-build
     build: {
+      env: envparser(),
+      vueRouterMode: 'history',
+      VUE_APP_GITHUB_ACCESS_TOKEN: process.env.VUE_APP_GITHUB_ACCESS_TOKEN,
+      // vueRouterMode: 'history',
       vueRouterMode: 'hash', // available values: 'hash', 'history'
       extendWebpack(cfg) {
         cfg.module.rules.push({

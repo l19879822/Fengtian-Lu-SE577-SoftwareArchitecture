@@ -12,16 +12,24 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.0.0",
+    "@vue/cli": "^5.0.0-beta.7",
     "axios": "^0.27.2",
+    "browserify": "^17.0.0",
     "core-js": "^3.6.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "hellojs": "^1.19.5",
     "js-yaml": "^4.1.0",
     "load-yaml-file": "^1.0.0",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
+    "vue-authenticate": "^1.5.0",
     "vue-router": "^4.0.0"
   },
   "devDependencies": {
     "@quasar/app-webpack": "^3.0.0",
+    "@quasar/quasar-app-extension-dotenv": "^1.1.0",
+    "@types/hellojs": "^1.16.4",
     "@types/js-yaml": "^4.0.5",
     "@types/node": "^12.20.21",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
@@ -31,7 +39,9 @@
     "eslint-plugin-vue": "^8.5.0",
     "prettier": "^2.5.1",
     "vue-cli-plugin-yaml": "^1.0.2",
-    "yaml-loader": "^0.8.0"
+    "webpack-env": "^0.8.0",
+    "yaml-loader": "^0.8.0",
+    "yamlify": "^0.2.0"
   },
   "browserslist": [
     "last 10 Chrome versions",
@@ -53,5 +63,20 @@
     "fs": false,
     "path": false,
     "os": false
+  },
+  "vue": {
+    "module": {
+      "rules": [
+        {
+          "test": "/.ya?ml$/",
+          "use": "yaml-loader"
+        }
+      ]
+    },
+    "resolve": {
+      "fallback": {
+        "util": "require.resolve('util/')"
+      }
+    }
   }
 }

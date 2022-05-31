@@ -32,9 +32,9 @@
     <q-page-container>
       <div id="navlinks">
         <div id="nav">
-          <router-link to="/">Login</router-link> |
-          <router-link to="/about">About Me</router-link> |
           <router-link to="/myrepositories">Github Repositories</router-link> |
+          <router-link to="/gistDisplay">Github Gist Display</router-link> |
+          <router-link to="/authentication">Authentication</router-link> |
         </div>
       </div>
       <router-view />

@@ -9,11 +9,17 @@ const routes: RouteRecordRaw[] = [
         path: '/myrepositories',
         component: () => import('pages/AppPages/GithubRepo.vue'),
       },
+      {
+        path: '/gistDisplay',
+        component: () => import('pages/AppPages/GistDisplay.vue'),
+      },
+      {
+        path: '/authentication',
+        component: () => import('pages/AppPages/UserAuth.vue'),
+      },
     ],
   },
 
-  // Always leave this as last one,
-  // but you can also remove it
   {
     path: '/:catchAll(.*)*',
     component: () => import('pages/ErrorNotFound.vue'),

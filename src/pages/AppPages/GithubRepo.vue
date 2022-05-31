@@ -23,9 +23,9 @@ export default {
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import ropoData from '../../data/GithubRepo.yaml';
+import repoData from '../../data/GithubRepo.yaml';
 
-let rowData = Object.entries(ropoData);
+let rowsData = Object.entries(repoData);
 
 type rowType = {
   id: string;
@@ -46,7 +46,7 @@ let rows = ref([] as rowType[]);
 
 onMounted(async () => {
   rows.value = [];
-  const resList = rowData.map((row) => {
+  const resList = rowsData.map((row) => {
     const mappedRow: rowType = {
       id: row[1].id,
       name: row[1].name,
