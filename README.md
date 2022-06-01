@@ -1,47 +1,21 @@
-# fengtian-lu-se577 (fengtian-lu-se577)
+## Install all dependencies needed especailly "@quasar/dotenv" extension to read the .env file to get the git access token.(@quasar/dotenv extension has been configured in the package.json)
 
-A Quasar Project
-
-## Install the dependencies
-
-```bash
-yarn
-# or
 npm install
-```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+## Then please create a .env file and put in the top (root) project directory, and this .env file should have one line and look like:
 
-```bash
+## The token below is a fake access token, I have submitted it to in the drexel blackboard for "Course Project - Deliverable 5"
+
+GITHUB_ACCESS_TOKEN = ghp_XXXXXXXXX
+
+## start the application
+
 quasar dev
-```
 
-### Lint the files
+### If by any change But just in case by any chance npm install doesn't install @quasar/dotenv extension, there is another approach to install it.
 
-```bash
-yarn lint
-# or
-npm run lint
-```
-
-### Format the files
-
-```bash
-yarn format
-# or
-npm run format
-```
-
-### Build the app for production
-
-```bash
-quasar build
-```
-
-### Customize the configuration
-
-See [Configuring quasar.config.js](https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js).
-
-### install quasar/dotenv extention
+## run quasar ext add @quasar/dotenv and then just "Enter or Y(Yes)" for all steps and it will suggest you to create and .env file in the root directory
 
 quasar ext add @quasar/dotenv
+
+## then the rest of the steps should be the same, just put the GITHUB_ACCESS_TOKEN = ghp_XXXXXXXXX that I submitted in the blackboard in the .env file and run quasar dev to start the application
