@@ -3,8 +3,11 @@
     <q-banner class="bg-primary text-white">
       <h6>Gist Display Demo</h6>
     </q-banner>
-    <p v-if="user">{{ user }}</p>
-    <p v-if="gistURL">{{ gistURL }}</p>
+    <div>Github gist hello world file content as below:</div>
+    <div class style="margin-top: 20px">
+      Hello World in Java:
+      <p>{{ helloWorldTxt }}</p>
+    </div>
   </div>
 </template>
 
@@ -15,8 +18,7 @@ export default defineComponent({
   name: 'GistDisplay',
   data() {
     return {
-      user: null,
-      gistURL: null,
+      helloWorldTxt: null,
     };
   },
   async mounted() {
@@ -28,13 +30,11 @@ export default defineComponent({
         },
       })
       .then((response) => {
-        this.user = response.data.owner.login;
-        this.gistURL = response.data.git_pull_url;
+        this.helloWorldTxt = response.data.files.helloworld.content;
         console.log(response);
       })
       .catch(() => {
-        this.user = null;
-        this.gistURL = null;
+        this.helloWorldTxt = null;
       });
   },
 });
