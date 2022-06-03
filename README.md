@@ -19,3 +19,5 @@ quasar dev
 quasar ext add @quasar/dotenv
 
 ## then the rest of the steps should be the same, just put the GITHUB_ACCESS_TOKEN = ghp_XXXXXXXXX that I submitted in the blackboard in the .env file and run quasar dev to start the application
+
+For the response of GistReponse.vue. Based on the assignment requirement, I created a helloworld file and write 3 lines of printing helloworld in java. When "Github Gist Display" link is clicked it will make a asychronized call to get the content helloworld file and display it on the page
